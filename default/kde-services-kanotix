@@ -1,0 +1,10 @@
+# Defaults for kde-services-kanotix initscript
+# sourced by /etc/init.d/kde-services-kanotix
+# installed at /etc/default/kde-services-kanotix by the maintainer scripts
+
+#
+# This is a POSIX shell fragment
+#
+
+# uncomment this line to disable the automatic start of the KDE-Services
+#KDE_SERVICES_ENABLED="false"

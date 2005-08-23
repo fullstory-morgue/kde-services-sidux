@@ -1,0 +1,30 @@
+kde-services-kanotix (0.3.1) unstable; urgency=low
+
+  * overhaul packaging.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 23 Aug 2005 16:13:17 +0200
+
+kde-services-kanotix (0.3) unstable; urgency=low
+
+  * Change defaults.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 25 Apr 2005 23:13:12 +0200
+
+kde-services-kanotix (0.2) unstable; urgency=low
+
+  * fix minor versioninf issues.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 25 Apr 2005 17:52:05 +0200
+
+kde-services-kanotix (0.1-2) unstable; urgency=low
+
+  * update packaging. 
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 10 Feb 2005 13:37:03 +0100
+
+kde-services-kanotix (0.1-1) unstable; urgency=low
+
+  * Initial Release, reassembled source package.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 13 Nov 2004 01:35:54 +0100
+

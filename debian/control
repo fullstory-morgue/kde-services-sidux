@@ -1,0 +1,15 @@
+Source: kde-services-kanotix
+Section: kde
+Priority: optional
+Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
+Build-Depends-Indep: cdbs (>= 0.4.23-1.1), build-essential, debhelper (>= 4.1.0)
+Standards-Version: 3.6.2
+
+Package: kde-services-kanotix
+Architecture: all
+Depends: kcontrol, xbase-clients, kmix, kdebase, kdelibs-bin, perl
+Provides: kde-services-knoppix
+Replaces: kde-services-knoppix
+Conflicts: kde-services-knoppix
+Description: starts mixer and krandrtray on KDE Startup
+ Automatic start of certain useful services like mixer and krandrtray.
