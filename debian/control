@@ -8,6 +8,7 @@ Standards-Version: 3.6.2
 Package: kde-services-kanotix
 Architecture: all
 Depends: kcontrol, xbase-clients, kmix, kdebase, kdelibs-bin, perl
+Suggests: knemo
 Provides: kde-services-knoppix
 Replaces: kde-services-knoppix
 Conflicts: kde-services-knoppix

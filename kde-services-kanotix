@@ -6,35 +6,34 @@
 [ "$KDE_SERVICES_ENABLED" = "false" ] && exit 0
 
 # Start krandrtray
-
-if [ -x /usr/bin/krandrtray ]
-then
+if [ -x /usr/bin/krandrtray ]; then
 	xrandr -q >/dev/null 2>/dev/null && krandrtray
 fi
 
 # Start mixer
+if [ -x /usr/bin/kmix ]; then
+	# kmix already started?
+	KMIX_STARTED=""
+	PSAX="$(ps ax)"
+	case "$PSAX" in *kmix*) KMIX_STARTED="yes" ;; esac
+ 
+	if test -z "$KMIX_STARTED" && lsmod | egrep -q "snd|soundcore"; then
+		#
+		# be sure that kmix just starts in tray!
+		#
 
-if [ -x /usr/bin/kmix ]
-then
-  # kmix already started?
-  KMIX_STARTED=""
-  PSAX="$(ps ax)"
-  case "$PSAX" in *kmix*) KMIX_STARTED="yes" ;; esac
-  
-  if test -z "$KMIX_STARTED" && lsmod | egrep -q "snd|soundcore"
-  then
-
-    #
-    # be sure that kmix just starts in tray!
-    #
-    
-    if [ -r $HOME/.kde/share/config/kmixrc ]
-    then
-      perl -pi -e 's/^Visible=.*/Visible=false/g' $HOME/.kde/share/config/kmixrc
-    else  
-      echo "Visible=false" > $HOME/.kde/share/config/kmixrc
-    fi  
-    
-    kmix
-  fi
+		if [ -r $HOME/.kde/share/config/kmixrc ]; then
+			perl -pi -e 's/^Visible=.*/Visible=false/g' $HOME/.kde/share/config/kmixrc
+		else
+			echo "Visible=false" > $HOME/.kde/share/config/kmixrc
+		fi
+		
+		kmix
+	fi
 fi
+
+# Start network monitor
+if [ -e /usr/share/services/kded/knemod.desktop ]; then
+	dcop kded kded loadModule knemod
+fi
+
