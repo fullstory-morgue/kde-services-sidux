@@ -1,8 +1,11 @@
-kde-services-kanotix (0.3.3) UNRELEASED; urgency=low
+kde-services-kanotix (0.3.3) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * remove cdbs auto-update feature.
+  * remove virtual knoppix packages.
+  * bump compat level to 5.
+  * clean up debian/control.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 25 Sep 2005 02:12:01 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 17 Dec 2005 02:53:56 +0100
 
 kde-services-kanotix (0.3.2) unstable; urgency=low
 
