@@ -37,3 +37,5 @@ if [ -e /usr/share/services/kded/knemod.desktop ]; then
 	dcop kded kded loadModule knemod
 fi
 
+# Start kpowersave
+[ -x /usr/bin/kpowersave ] && pidof powersaved >/dev/null && /usr/bin/kpowersave
