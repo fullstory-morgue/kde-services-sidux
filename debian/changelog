@@ -1,3 +1,9 @@
+kde-services-kanotix (0.3.5) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 18 Sep 2006 01:43:13 +0200
+
 kde-services-kanotix (0.3.4) unstable; urgency=low
 
   * start kpowersave.
