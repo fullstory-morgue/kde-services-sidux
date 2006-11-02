@@ -1,8 +1,9 @@
 kde-services-kanotix (0.3.6) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
+  * fix lintian errors.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 19 Sep 2006 00:32:36 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu,  2 Nov 2006 13:20:26 +0100
 
 kde-services-kanotix (0.3.5) unstable; urgency=low
 
