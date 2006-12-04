@@ -1,9 +1,10 @@
-kde-services-kanotix (0.3.6) UNRELEASED; urgency=low
+kde-services-sidux (0.3.6) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
   * fix lintian errors.
+  * Intial version for sidux
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu,  2 Nov 2006 13:20:26 +0100
+ -- Joaquim Boura <x-un-i@sidux.com>  Mon,  4 Dec 2006 16:16:45 +0100
 
 kde-services-kanotix (0.3.5) unstable; urgency=low
 

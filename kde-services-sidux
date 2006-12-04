@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Should we offer our services?
-[ -f /etc/default/kde-services-kanotix ] && . /etc/default/kde-services-kanotix
+[ -f /etc/default/kde-services-sidux ] && . /etc/default/kde-services-sidux
 
 [ "$KDE_SERVICES_ENABLED" = "false" ] && exit 0
 
