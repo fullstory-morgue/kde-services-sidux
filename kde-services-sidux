@@ -39,6 +39,9 @@ fi
 
 # Start kpowersave
 if [ -x /usr/bin/kpowersave ]; then
-	pidof powersaved >/dev/null && /usr/bin/kpowersave
-	[ -n "$(find /proc/acpi/battery/ -mindepth 1 -type d 2>/dev/null)" ] && (pidof kpowersave &>/dev/null || /usr/bin/kpowersave)
+	if pidof powersaved >/dev/null 2>&1; then
+		/usr/bin/kpowersave
+	elif [ -n "$(perl -le 'print for grep -d, </proc/acpi/battery/*>')" ]; then
+		/usr/bin/kpowersave
+	fi
 fi
