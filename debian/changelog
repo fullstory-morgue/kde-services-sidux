@@ -1,9 +1,5 @@
-kde-services-sidux (0.3.8) UNRELEASED; urgency=low
+kde-services-sidux (0.3.8) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Kel Modderman ]
   * Fix battery detection, previous code returned 0 when /proc/acpi/battery
     was present but empty.
   * Cleanup kopwersave start.
