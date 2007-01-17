@@ -1,8 +1,14 @@
 kde-services-sidux (0.3.9) UNRELEASED; urgency=low
 
+  [ Stefan Lippers-Hollmann ]
   * NOT RELEASED YET
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 17 Jan 2007 13:13:45 +0100
+  [ Kel Modderman ]
+  * If kpowersave is to be started in live mode, hack kpowersaverc so that it
+    is set to AutoStart, etcskel will now shiop with default kpowersaverc that
+    will disable its AutoStart.
+
+ -- Kel Modderman <kel@otaku42.de>  Thu, 18 Jan 2007 08:10:13 +1000
 
 kde-services-sidux (0.3.8) unstable; urgency=low
 
