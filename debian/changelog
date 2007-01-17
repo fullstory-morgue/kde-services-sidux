@@ -1,9 +1,5 @@
-kde-services-sidux (0.3.9) UNRELEASED; urgency=low
+kde-services-sidux (0.3.9) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Kel Modderman ]
   * If kpowersave is to be started in live mode, hack kpowersaverc so that it
     is set to AutoStart, etcskel will now shiop with default kpowersaverc that
     will disable its AutoStart.
