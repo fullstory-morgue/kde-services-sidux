@@ -40,7 +40,7 @@ fi
 # Start kpowersave
 if [ -x /usr/bin/kpowersave ]; then
 	if pidof powersaved >/dev/null 2>&1 || \
-		[ -n "$(perl -le 'print for grep -d, </proc/acpi/battery/*>')" ]; then
+		[ "$(perl -le 'print("battery") if grep -d, </proc/acpi/battery/*>')" = "battery" ]; then
 		/usr/bin/kpowersave
 		if [ -r $HOME/.kde/share/config/kpowersaverc ]; then
 			perl -pi -e 's/^AutoStart=.*/AutoStart=true/' \
