@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Should we offer our services?
 [ -f /etc/default/kde-services-sidux ] && . /etc/default/kde-services-sidux
@@ -23,7 +23,7 @@ if [ -x /usr/bin/kmix ]; then
 		#
 
 		if [ -r $HOME/.kde/share/config/kmixrc ]; then
-			perl -pi -e 's/^Visible=.*/Visible=false/' $HOME/.kde/share/config/kmixrc
+			sed -i 's/^Visible=.*/Visible=false/' $HOME/.kde/share/config/kmixrc
 		else
 			echo "Visible=false" > $HOME/.kde/share/config/kmixrc
 		fi
@@ -39,12 +39,7 @@ fi
 
 # Start kpowersave
 if [ -x /usr/bin/kpowersave ]; then
-	if pidof powersaved >/dev/null 2>&1 || \
-		[ -n "$(perl -le 'print for grep -d, </proc/acpi/battery/*>')" ]; then
+	if pidof powersaved >/dev/null || [ -n "$KDE_SERVICES_LAPTOP" ]; then
 		/usr/bin/kpowersave
-		if [ -r $HOME/.kde/share/config/kpowersaverc ]; then
-			perl -pi -e 's/^AutoStart=.*/AutoStart=true/' \
-				$HOME/.kde/share/config/kpowersaverc
-		fi
 	fi
 fi
