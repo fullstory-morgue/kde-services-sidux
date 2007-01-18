@@ -6,5 +6,7 @@
 # This is a POSIX shell fragment
 #
 
-# uncomment this line to disable the automatic start of the KDE-Services
-#KDE_SERVICES_ENABLED="false"
+# change to "false" to disable the automatic start of the KDE-Services
+KDE_SERVICES_ENABLED="true"
+
+KDE_SERVICES_LAPTOP="false"

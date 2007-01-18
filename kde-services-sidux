@@ -39,7 +39,7 @@ fi
 
 # Start kpowersave
 if [ -x /usr/bin/kpowersave ]; then
-	if pidof powersaved >/dev/null || [ -n "$KDE_SERVICES_LAPTOP" ]; then
+	if pidof powersaved >/dev/null || [ "$KDE_SERVICES_LAPTOP" = "true" ]; then
 		/usr/bin/kpowersave
 	fi
 fi
