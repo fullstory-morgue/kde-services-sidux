@@ -1,9 +1,5 @@
-kde-services-sidux (0.3.10) UNRELEASED; urgency=low
+kde-services-sidux (0.3.10) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Kel Modderman ]
   * Use sed not perl, drop dependency on perl.
   * Don't bother with kpowersavrc hack.
   * Make script /bin/sh.
