@@ -1,3 +1,9 @@
+kde-services-sidux (0.3.12) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri, 19 Jan 2007 13:40:04 +0100
+
 kde-services-sidux (0.3.11) unstable; urgency=low
 
   * Re-enable kpowersaverc hack, allow kpowersave to Autostart if was summoned
