@@ -1,9 +1,5 @@
-kde-services-sidux (0.3.11) UNRELEASED; urgency=low
+kde-services-sidux (0.3.11) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Kel Modderman ]
   * Re-enable kpowersaverc hack, allow kpowersave to Autostart if was summoned
     in live-mode.
   * Use similar grep/sed/echo trio to that used in live-autoconfig for kmixrc
