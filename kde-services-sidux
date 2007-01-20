@@ -13,7 +13,11 @@ fi
 # Start mixer
 if [ -x /usr/bin/kmix ]; then
 	# kmix already started?
-	if pgrep -x kmix >/dev/null 2>&1 && lsmod | egrep -q "snd|soundcore"; then
+	KMIX_STARTED=""
+	PSAX="$(ps ax)"
+	case "$PSAX" in *kmix*) KMIX_STARTED="yes" ;; esac
+ 
+	if test -z "$KMIX_STARTED" && lsmod | egrep -q "snd|soundcore"; then
 		# be sure that kmix just starts in tray!
 		if grep -q ^Visible ~/.kde/share/config/kmixrc 2>/dev/null; then
 			sed -i 's/^Visible=.*/Visible=false/' ~/.kde/share/config/kmixrc
@@ -22,19 +26,6 @@ if [ -x /usr/bin/kmix ]; then
 		fi
 		
 		kmix
-		
-		if [ "$?" -eq 0 ] && [ -x /usr/bin/dcop ]; then
-			sleep 2
-			# set a sane default volume on Mixers set to 0
-			MIXERS=$(dcop kmix | sed -n 's/Mixer\([[:digit:]]\+\)/\1/p')
-			if [ -n "$MIXERS" ]; then
-				for mixer in $MIXERS; do
-					if [ "$(dcop kmix Mixer${mixer} volume ${mixer})" = 0 ]; then
-						dcop kmix Mixer${mixer} setMasterVolume 75
-					fi
-				done
-			fi
-		fi
 	fi
 fi
 
