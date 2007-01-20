@@ -12,12 +12,8 @@ fi
 
 # Start mixer
 if [ -x /usr/bin/kmix ]; then
-	# kmix already started?
-	KMIX_STARTED=""
-	PSAX="$(ps ax)"
-	case "$PSAX" in *kmix*) KMIX_STARTED="yes" ;; esac
- 
-	if test -z "$KMIX_STARTED" && lsmod | egrep -q "snd|soundcore"; then
+	# kmix already started? sound system active?
+	if ! pgrep -x kmix >/dev/null && lsmod | egrep -q "snd|soundcore"; then
 		# be sure that kmix just starts in tray!
 		if grep -q ^Visible ~/.kde/share/config/kmixrc 2>/dev/null; then
 			sed -i 's/^Visible=.*/Visible=false/' ~/.kde/share/config/kmixrc
@@ -36,8 +32,11 @@ fi
 
 # Start kpowersave
 if [ -x /usr/bin/kpowersave ]; then
-	if pidof powersaved >/dev/null || [ "$KDE_SERVICES_LAPTOP" != "false" ]; then
-		/usr/bin/kpowersave
+	if ! pgrep -x kpowersave >/dev/null && \
+		pidof powersaved >/dev/null || [ "$KDE_SERVICES_LAPTOP" != "false" ]; then
+		
+		kpowersave
+		
 		# allow kpowersave to autostart (disabled by default)
 		if grep -q ^Autostart ~/.kde/share/config/kpowersaverc 2>/dev/null; then
 			sed -i 's/Autostart=.*/Autostart=true/' ~/.kde/share/config/kpowersaverc

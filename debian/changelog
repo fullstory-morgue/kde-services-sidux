@@ -6,8 +6,11 @@ kde-services-sidux (0.3.12) UNRELEASED; urgency=low
   [ Kel Modderman ]
   * Revert 3959, the kmix volume workaround was faulty by design, and the old
     process detection seemed to work more reliably.
+  * Reinstate new kmix process detection via `pgrep -x' but this time check for
+    correct return value (!= 0).
+  * Check to see if kpowersave is already started with `pgrep -x'.
 
- -- Kel Modderman <kel@otaku42.de>  Sat, 20 Jan 2007 14:47:07 +1000
+ -- Kel Modderman <kel@otaku42.de>  Sat, 20 Jan 2007 14:59:31 +1000
 
 kde-services-sidux (0.3.11) unstable; urgency=low
 
