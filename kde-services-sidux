@@ -32,8 +32,8 @@ fi
 
 # Start kpowersave
 if [ -x /usr/bin/kpowersave ]; then
-	if ! pgrep -x kpowersave >/dev/null && \
-		pidof powersaved >/dev/null || [ "$KDE_SERVICES_LAPTOP" != "false" ]; then
+	if ( ! pgrep -x kpowersave >/dev/null && pidof powersaved >/dev/null ) \
+		|| [ "$KDE_SERVICES_LAPTOP" != "false" ]; then
 		
 		kpowersave
 		
