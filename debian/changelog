@@ -1,9 +1,5 @@
-kde-services-sidux (0.3.12) UNRELEASED; urgency=low
+kde-services-sidux (0.3.12) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Kel Modderman ]
   * Revert 3959, the kmix volume workaround was faulty by design, and the old
     process detection seemed to work more reliably.
   * Reinstate new kmix process detection via `pgrep -x' but this time check for
