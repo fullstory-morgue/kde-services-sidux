@@ -45,3 +45,4 @@ if [ -x /usr/bin/kpowersave ]; then
 		fi
 	fi
 fi
+

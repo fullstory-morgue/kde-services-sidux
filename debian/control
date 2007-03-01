@@ -8,7 +8,6 @@ Standards-Version: 3.7.2
 Package: kde-services-sidux
 Architecture: all
 Depends: kcontrol, xbase-clients, kmix, kdebase, kdelibs-bin, procps
-Conflicts: kde-services-kanotix
 Suggests: knemo
 Description: starts mixer and krandrtray on KDE Startup
  Automatic start of certain useful services like mixer and krandrtray.
