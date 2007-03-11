@@ -32,11 +32,8 @@ fi
 
 # Start kpowersave
 if [ -x /usr/bin/kpowersave ]; then
-	if ( ! pgrep -x kpowersave >/dev/null && pidof powersaved >/dev/null ) \
-		|| [ "$KDE_SERVICES_LAPTOP" != "false" ]; then
-		
+	if ! pgrep -x kpowersave >/dev/null && pidof powersaved >/dev/null; then
 		kpowersave
-		
 		# allow kpowersave to autostart (disabled by default)
 		if grep -q ^Autostart ~/.kde/share/config/kpowersaverc 2>/dev/null; then
 			sed -i 's/Autostart=.*/Autostart=true/' ~/.kde/share/config/kpowersaverc

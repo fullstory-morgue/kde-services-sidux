@@ -8,5 +8,3 @@
 
 # change to "false" to disable the automatic start of the KDE-Services
 KDE_SERVICES_ENABLED="true"
-
-KDE_SERVICES_LAPTOP="false"
