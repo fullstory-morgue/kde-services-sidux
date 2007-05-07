@@ -1,4 +1,4 @@
-kde-services-sidux (0.3.15) UNRELEASED; urgency=low
+kde-services-sidux (0.3.15) unstable; urgency=low
 
   * Add KDE_KDM_THEME variable. This kinda doesn't suit kde-services-sidux,
     however this package no longer provides a real service in form of init
