@@ -1,3 +1,9 @@
+kde-services-sidux (0.3.16) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 07 May 2007 12:21:02 +0200
+
 kde-services-sidux (0.3.15) unstable; urgency=low
 
   * Add KDE_KDM_THEME variable. This kinda doesn't suit kde-services-sidux,
