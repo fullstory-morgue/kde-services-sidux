@@ -1,8 +1,10 @@
 kde-services-sidux (0.3.15) UNRELEASED; urgency=low
 
-  * NOT RELEASED YET
+  * Add KDE_KDM_THEME variable. This kinda doesn't suit kde-services-sidux,
+    however this package no longer provides a real service in form of init
+    script and could be renamed and provide defaults for other WM's/DM's too.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 12 Mar 2007 01:23:00 +0100
+ -- Kel Modderman <kel@otaku42.de>  Mon, 07 May 2007 18:34:53 +1000
 
 kde-services-sidux (0.3.14) unstable; urgency=low
 

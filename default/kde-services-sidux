@@ -1,10 +1,13 @@
-# Defaults for kde-services-sidux initscript
-# sourced by /etc/init.d/kde-services-sidux
+# Defaults for kde for live user
+# sourced by /usr/bin/kde-services-sidux and /etc/init.d/live-autoconfig
 # installed at /etc/default/kde-services-sidux by the maintainer scripts
 
 #
 # This is a POSIX shell fragment
 #
+
+# specify KDM theme to be used
+KDE_KDM_THEME="/usr/share/apps/kdm/themes/sidux"
 
 # change to "false" to disable the automatic start of the KDE-Services
 KDE_SERVICES_ENABLED="true"
